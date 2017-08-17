@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/first-article', function (req,res){
-    console.log('url is req and res is done');
+    res.send('url is req and res is done');
 });
 
 app.get('/ui/style.css', function (req, res) {
