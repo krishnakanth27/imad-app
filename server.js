@@ -69,7 +69,7 @@ app.get('/', function (req, res) {
 });
 app.get('/:articleName' , function (req, res) {
   var articlename=req.params.articlename;
-  res.send(createhtml(articles[articlesName]));  
+  res.send(createhtml(articles[articleName]));  
 });
 
 app.get('/second-article' , function (req, res) {
