@@ -6,14 +6,14 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles = {
-                         'first-article' : {
+                         'article-one' : {
                          title: 'first-article | krishnakanth' ,
                          date: '18th september' ,
                          heading:'yo, i make things.' ,
                          content: 'gotta pursue a career in It sector for sure and make lots and lots of money for my family.see ya after making some.'
                                          },
                           
-                          'second-article' : {
+                          'article-two' : {
                          title: 'second-article | krishnakanth' ,
                          date: '17th september' ,
                          heading:'rockstar kittu is my name' ,
