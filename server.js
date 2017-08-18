@@ -5,13 +5,20 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-
-var firstarticle = {
-    title: 'first-article | krishnakanth' ,
-    date: '18th september' ,
-    heading:'yo, i make things.' ,
-    content: ' gotta pursue a career in It sector for sure and make lots and lots of money for my family.see ya after making some.'
-    }
+var articles = {
+`     var articleone : {
+     title: 'first-article | krishnakanth' ,
+     date: '18th september' ,
+     heading:'yo, i make things.' ,
+     content: ' gotta pursue a career in It sector for sure and make lots and lots of money for my family.see ya after making some.'
+                    }
+     var articletwo : {
+     title: 'second-article | krishnakanth' ,
+     date: '17th september' ,
+     heading:'rockstar kittu is my name' ,
+     content: ' making money is my game'
+                      }
+                }
 
 function createhtml (data) {
 var title =data.title    
@@ -52,16 +59,12 @@ var htmltemplate = `
 return htmltemplate;
 }
 
-
-
-
-
-
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/first-article' , function (req, res) {
-  res.send(createhtml(firstarticle));  
+app.get('/:articlename' , function (req, res) {
+  var articlename=req.params.articlename;
+  res.send(createtemple(article[articlename]));  
 });
 
 app.get('/second-article' , function (req, res) {
