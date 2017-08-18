@@ -67,9 +67,9 @@ return htmltemplate;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/:articlename' , function (req, res) {
+app.get('/:articleName' , function (req, res) {
   var articlename=req.params.articlename;
-  res.send(createhtml(articles[articlesname]));  
+  res.send(createhtml(articles[articlesName]));  
 });
 
 app.get('/second-article' , function (req, res) {
