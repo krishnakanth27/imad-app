@@ -5,11 +5,63 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+
+var firstarticle = {
+    title: 'first-article | krishnakanth' ,
+    date: '18th september' ,
+    heading:'yo, i make things.' ,
+    content: ' gotta pursue a career in It sector for sure and make lots and lots of money for my family.see ya after making some.'
+    }
+
+function createhtml (data) {
+var title =data.title    
+var date =data.date
+var heading =data.heading
+var content =data.content
+var htmltemplate = `
+ <html> 
+     <head>
+        <title>
+           ${title}
+        </title>  
+       <link href=/ui/style.css rel="stylesheet" />
+      </head>
+      <body>
+            <div class="container">
+                <div>
+                <a href='\'>back</a>
+                </div>
+                <hr/>
+            <h4>
+               ${date}
+            </h4>
+            <div>
+                <p>
+                    ${heading}
+                </p>
+                <p>
+                    ${content}
+                </p>
+            </div>
+      </div>
+      </body>
+
+<html>
+    
+`;
+return htmltemplate;
+}
+
+
+
+
+
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 app.get('/first-article' , function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'first-article.html'));  
+  res.send(createhtml(firstarticle), 'first-article')  
 });
 
 app.get('/second-article' , function (req, res) {
