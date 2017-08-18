@@ -61,7 +61,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 app.get('/first-article' , function (req, res) {
-  res.send(createhtml(firstarticle), 'first-article')  
+  res.send(createhtml(firstarticle));  
 });
 
 app.get('/second-article' , function (req, res) {
