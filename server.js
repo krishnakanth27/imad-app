@@ -63,6 +63,10 @@ var htmltemplate = `
 `;
 return htmltemplate;
 }
+var counter=0;
+app.get('/counter', function (rq,res){
+    res.send(counter,tostring());
+});
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
