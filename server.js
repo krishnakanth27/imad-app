@@ -63,8 +63,9 @@ var htmltemplate = `
 `;
 return htmltemplate;
 }
+
 var counter=0;
-app.get('/counter', function (rq,res){
+app.get('/counter', function (req,res){
     res.send(counter,tostring());
 });
 
