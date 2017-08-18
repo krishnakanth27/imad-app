@@ -2,9 +2,9 @@ console.log('Loaded!');
 var element = document.getElementById('main-text');
 element.innerHTML='krishnakanth'
 var img=document.getElementById('madi');
-var marinLeft=0;
+var marginLeft = 0;
 function moveRight() {
-    marginLeft=marginLeft+10;
+    marginLeft=marginLeft + 10;
     img.style.marginLeft=marginLeft+'px';
 }
 img.onclick = function() {
