@@ -6,19 +6,19 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles = {
-`     var articleone : {
+`     'articleone' : {
      title: 'first-article | krishnakanth' ,
      date: '18th september' ,
      heading:'yo, i make things.' ,
      content: ' gotta pursue a career in It sector for sure and make lots and lots of money for my family.see ya after making some.'
                     }
-     var articletwo : {
+      'articletwo' : {
      title: 'second-article | krishnakanth' ,
      date: '17th september' ,
      heading:'rockstar kittu is my name' ,
      content: ' making money is my game'
                       }
-                }
+                };
 
 function createhtml (data) {
 var title =data.title    
@@ -26,6 +26,7 @@ var date =data.date
 var heading =data.heading
 var content =data.content
 var htmltemplate = `
+ 
  <html> 
      <head>
         <title>
