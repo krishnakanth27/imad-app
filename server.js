@@ -67,13 +67,13 @@ return htmltemplate;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+
 app.get('/:articleName' , function (req, res) {
-  var articleName=req.params.articleName;
+  var articleName = req.params.articleName;
   res.send(createhtml(articles[articleName]));  
 });
 
-app.get('/second-article' , function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'second-article.html'));  
+  
 });
 
 app.get('/ui/style.css', function (req, res) {
